@@ -12,8 +12,7 @@ import SettingsCard, { settingsGroupStyle as groupStyle } from "./SettingsCard";
 import { settingsText } from "./settingsText";
 import { useRouter } from "expo-router";
 import { profileText } from "./profileText";
-
-const websiteUrl = "http://localhost:5173";
+import { websiteLinks } from "../../shared/websiteLinks";
 
 export function notificationPermissionAllowed(permission) {
   const ios = permission?.ios?.status;
@@ -47,8 +46,8 @@ export default function SettingsPreferences() {
   }, []);
 
   const openDeviceSettings = () => { void Linking.openSettings().catch(() => Alert.alert(text.error, text.permission)); };
-  const openWebsite = () => {
-    void Linking.openURL(websiteUrl).catch(() => { if (alive.current) Alert.alert(text.error, text.linkError); });
+  const openWebsite = (url) => {
+    void Linking.openURL(url).catch(() => { if (alive.current) Alert.alert(text.error, text.linkError); });
   };
   const updateNotifications = async value => {
     if (!ready || updating.current || syncing) return;
@@ -116,11 +115,11 @@ export default function SettingsPreferences() {
     </View>}
     <View style={groupStyle}>
       <SettingsCard grouped icon="shield-checkmark-outline" title={text.privacyPolicy} isArabic={isArabic}
-        accessibilityRole="link" onPress={openWebsite} />
+        accessibilityRole="link" onPress={() => openWebsite(websiteLinks.privacy)} />
       <SettingsCard grouped divider icon="document-text-outline" title={text.termsOfService} isArabic={isArabic}
-        accessibilityRole="link" onPress={openWebsite} />
+        accessibilityRole="link" onPress={() => openWebsite(websiteLinks.terms)} />
       <SettingsCard grouped divider icon="information-circle-outline" title={text.aboutSaflal} isArabic={isArabic}
-        accessibilityRole="link" onPress={openWebsite} />
+        accessibilityRole="link" onPress={() => openWebsite(websiteLinks.about)} />
     </View>
     {languageOpen && <Modal transparent animationType="fade" visible onRequestClose={() => { if (!changingLanguage) setLanguageOpen(false); }}>
       <View style={{ flex: 1, justifyContent: "center", padding: 24, backgroundColor: "#00000066" }}>

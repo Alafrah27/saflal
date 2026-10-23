@@ -3,9 +3,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
 import { Trans, useTranslation } from "react-i18next";
 import { AuthButton } from "../../components/auth/AuthControls";
-
-// Use the same temporary website destination previously selected for Settings.
-const websiteUrl = "http://localhost:5173";
+import { websiteLinks } from "../../shared/websiteLinks";
 
 export default function Wellcome() {
     const router = useRouter();
@@ -13,9 +11,9 @@ export default function Wellcome() {
     const handleRoute = () => {
         router.push("/(auth)/login");
     };
-    const openLegalLink = async () => {
+    const openLegalLink = async (url) => {
         try {
-            await Linking.openURL(websiteUrl);
+            await Linking.openURL(url);
         } catch {
             Alert.alert(t("app_name"), t("welcome_link_error"));
         }
@@ -45,11 +43,14 @@ export default function Wellcome() {
 
                     <Text className="text-center text-xs text-slate-500 px-6 leading-5">
                         <Trans i18nKey="welcome_legal" components={{
-                            terms: <Text accessibilityRole="link" onPress={openLegalLink} style={{ color: "#2563eb", textDecorationLine: "underline" }} />,
-                            privacy: <Text accessibilityRole="link" onPress={openLegalLink} style={{ color: "#2563eb", textDecorationLine: "underline" }} />,
+                            terms: <Text accessibilityRole="link" onPress={() => openLegalLink(websiteLinks.terms)} style={{ color: "#2563eb", textDecorationLine: "underline" }} />,
+                            privacy: <Text accessibilityRole="link" onPress={() => openLegalLink(websiteLinks.privacy)} style={{ color: "#2563eb", textDecorationLine: "underline" }} />,
                         }} />
                     </Text>
-
+                    <Text accessibilityRole="link" onPress={() => openLegalLink(websiteLinks.about)}
+                        style={{ textAlign: "center", color: "#2563eb", textDecorationLine: "underline", fontSize: 12, paddingVertical: 8 }}>
+                        {t("about_saflal")}
+                    </Text>
 
                 </View>
 
