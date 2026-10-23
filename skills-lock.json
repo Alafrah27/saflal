@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "clerk-expo": {
+      "source": "clerk/skills",
+      "sourceType": "github",
+      "skillPath": "skills/clerk-expo/SKILL.md",
+      "computedHash": "268e6d6ea293c440d9a2fa4fd2a97828e9cbda1c66e2cc2cd7c4379a840f21cc"
+    },
+    "stream-react-native": {
+      "source": "getstream/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/stream-react-native/SKILL.md",
+      "computedHash": "99671591612b7efd67d808cd842c13ba6530961ef6448694dc45a4520935a79e"
+    }
+  }
+}

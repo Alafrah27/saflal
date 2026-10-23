@@ -1,0 +1,26 @@
+export const profileText = {
+  en: {
+    profile: "User profile", block: "Block user", unblock: "Unblock", close: "Close", cancel: "Cancel", retry: "Retry",
+    loading: "Loading profile…", saving: "Saving…", unavailable: "Profile unavailable", user: "Unavailable user",
+    bio: "Bio", noBio: "No bio yet", email: "Email", noEmail: "Email not shared", joined: "Member since", noDate: "Not available",
+    viewImage: "View profile photo", error: "Could not load this profile. Please retry.",
+    saveError: "Could not update blocking. Check your connection and retry.",
+    blockTitle: "Block this user?", unblockTitle: "Unblock this user?",
+    blockBody: "Messages and calls between you will stop. Any active call with this person will end. Your chat history stays unchanged. They will not be notified.",
+    unblockBody: "Communication can resume when friendship and privacy rules allow it. Unblocking does not restore deleted friendships or resend messages.",
+    blockedUsers: "Blocked Contacts", empty: "No blocked contacts", listError: "Could not load blocked contacts. Please retry.",
+    more: "Load more", refresh: "Refresh blocked contacts", notBlocked: "This user is no longer blocked.",
+  },
+  ar: {
+    profile: "الملف الشخصي", block: "حظر المستخدم", unblock: "إلغاء الحظر", close: "إغلاق", cancel: "إلغاء", retry: "إعادة المحاولة",
+    loading: "جارٍ تحميل الملف…", saving: "جارٍ الحفظ…", unavailable: "الملف الشخصي غير متاح", user: "مستخدم غير متاح",
+    bio: "نبذة", noBio: "لا توجد نبذة بعد", email: "البريد الإلكتروني", noEmail: "البريد الإلكتروني غير مشارك", joined: "عضو منذ", noDate: "غير متاح",
+    viewImage: "عرض صورة الملف الشخصي", error: "تعذر تحميل الملف الشخصي. حاول مرة أخرى.",
+    saveError: "تعذر تحديث الحظر. تحقق من اتصالك وحاول مرة أخرى.",
+    blockTitle: "حظر هذا المستخدم؟", unblockTitle: "إلغاء حظر هذا المستخدم؟",
+    blockBody: "ستتوقف الرسائل والمكالمات بينكما، وستنتهي أي مكالمة جارية مع هذا الشخص. سيبقى سجل المحادثة كما هو ولن يتم إشعاره.",
+    unblockBody: "يمكن استئناف التواصل عندما تسمح الصداقة وقواعد الخصوصية بذلك. إلغاء الحظر لا يعيد الصداقات المحذوفة ولا يعيد إرسال الرسائل.",
+    blockedUsers: "جهات الاتصال المحظورة", empty: "لا توجد جهات اتصال محظورة", listError: "تعذر تحميل جهات الاتصال المحظورة. حاول مرة أخرى.",
+    more: "تحميل المزيد", refresh: "تحديث جهات الاتصال المحظورة", notBlocked: "لم يعد هذا المستخدم محظورًا.",
+  },
+};
