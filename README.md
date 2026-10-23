@@ -46,4 +46,6 @@ These checks do not verify production deployments, all admin functionality, rele
 
 This is the current working-tree snapshot, including migration work. It is not a claim that the migration or Google Play release is complete. Legal pages remain review drafts; see [legal review notes](docs/legal/LEGAL_REVIEW_NOTES.md) before publication.
 
-The Git history begins with a clean publication commit and intentionally excludes old histories containing tracked environment/dependency files. Installed dependencies, generated builds/native folders, temporary files and private credentials are not part of the source snapshot.
+The production website build is included in `frontend/dist/` at the owner's request. Its root-relative asset URLs assume deployment at the domain root; the static host also needs SPA fallback for application routes. Keeping it in Git does not itself deploy the website.
+
+The Git history begins with a clean publication commit and intentionally excludes old histories containing tracked environment/dependency files. Installed dependencies, other generated builds/native folders, temporary files and private credentials are not part of the source snapshot.

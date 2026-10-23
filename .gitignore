@@ -37,3 +37,7 @@ GoogleService-Info.plist
 /mobile/android/
 /mobile/ios/
 .DS_Store
+
+# The production website build is committed at the owner's request.
+!/frontend/dist/
+!/frontend/dist/**

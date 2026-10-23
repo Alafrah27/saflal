@@ -14,6 +14,8 @@ npm run preview
 
 Routes: `/`, `/privacy`, `/terms`, `/about`, and `/delete-account`. `/privacy-policy` and `/terms-of-service` redirect to the corresponding pages. Unknown routes redirect to Home. A static host must serve `index.html` for navigation routes (SPA fallback), while assets and APK files continue to be served as files.
 
+The production build in `frontend/dist/` is intentionally committed for deployment. Rebuild after source changes and commit the complete updated folder, including `index.html` and its matching hashed assets. This build uses root-relative asset URLs; hosting under a subdirectory requires an appropriate Vite base configuration and a new build.
+
 Policy pages visibly retain their draft status and unresolved fields. Reviewer notes and the internal code audit are excluded from the rendered pages. Resolve the legal/operational items in `docs/legal/LEGAL_REVIEW_NOTES.md` before publication; adding these pages does not deploy the website or implement an external deletion-request processor.
 
 ## APK download

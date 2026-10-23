@@ -28,4 +28,4 @@ No environment-variable names were found in the current first-party admin source
 
 ## Excluded items
 
-Real `.env` files, service-account JSON, Firebase project files, signing keys, installed `node_modules`, generated builds/native folders, logs, temporary checkpoints, nested `.git` directories and prior Git histories were excluded. The source, lockfiles, application assets, tests and documentation are included. Keep credentials out of future commits too.
+Real `.env` files, service-account JSON, Firebase project files, signing keys, installed `node_modules`, generated native folders and other build output, logs, temporary checkpoints, nested `.git` directories and prior Git histories were excluded. The production website build in `frontend/dist/` is intentionally included at the owner's request, alongside the source, lockfiles, application assets, tests and documentation. Keep credentials out of future commits too.
